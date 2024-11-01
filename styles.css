@@ -31,6 +31,7 @@ nav {
     display: inline-block; /* Displays the navigation inline */
 }
 
+/* Navigation links - added transition for smooth hover effect */
 nav a {
     color: #fff; /* White color for navigation links */
     margin: 0 15px; /* Space between links */
@@ -38,12 +39,13 @@ nav a {
     font-weight: bold; /* Makes the links bold */
     padding: 5px 10px; /* Adds padding for a button-like appearance */
     border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition on hover and scaling */
 }
 
 nav a:hover, nav a:focus {
     background-color: #f77f00; /* Orange background on hover and focus */
     outline: none; /* Removes default outline on focus */
+    transform: scale(1.05); /* Slightly enlarges link on hover */
 }
 
 /* Menu toggle button */
@@ -149,6 +151,11 @@ h2 {
     font-size: 1.8rem; /* Slightly larger font size for better visibility */
 }
 
+/* Navigation Hidden Class */
+.nav-hidden {
+    display: none; /* Hides navigation links initially */
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
     /* Adjust product article width for tablets */
@@ -198,3 +205,4 @@ h2 {
         font-size: 0.9rem; /* Smaller font size for paragraphs */
     }
 }
+
